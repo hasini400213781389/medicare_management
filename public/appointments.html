@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCare Desk | Appointments</title><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="app-shell"><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">✚</span><span>MediCare Desk<small>Hospital Suite</small></span></a>
+<div class="nav-label">WORKSPACE</div><nav>
+<a class="nav-link" href="index.html"><span>▦</span> Dashboard</a>
+<a class="nav-link " href="patients.html"><span>♙</span> Patients</a>
+<a class="nav-link " href="doctors.html"><span>⚕</span> Doctors</a>
+<a class="nav-link active" href="appointments.html"><span>▣</span> Appointments</a>
+</nav><div class="sidebar-bottom"><div class="help-card"><div class="help-icon">♡</div><b>Need a hand?</b><p>Keep your care operations running smoothly.</p></div><small>© 2026 MediCare Desk</small></div></aside>
+<main class="main-content"><header class="topbar"><div><span class="eyebrow">SCHEDULING CENTER</span><h1>Appointments</h1></div><div class="top-actions"><span class="today" id="todayLabel"></span><div class="avatar">AD</div></div></header>
+<section class="page-intro"><div><h2>Make every visit simple and on time.</h2><p>Organize information securely and keep your care team in sync.</p></div><div class="intro-art"><img src="assets/appointment-calendar.svg" alt="Healthcare illustration"><img src="assets/patient-care.svg" alt="Healthcare illustration"></div></section>
+
+<section class="toolbar"><div class="search-box">⌕ <input id="searchInput" placeholder="Search patient, doctor or status…"></div><button class="btn btn-primary" id="addBtn">＋ Book appointment</button></section>
+<section class="content-card"><div class="section-heading"><div><span class="eyebrow">VISIT SCHEDULE</span><h3>All appointments</h3></div><span class="muted" id="recordCount"></span></div><div class="table-wrap"><table><thead><tr><th>Patient</th><th>Doctor</th><th>Specialization</th><th>Date</th><th>Time</th><th>Status</th><th>Actions</th></tr></thead><tbody id="dataTable"><tr><td colspan="7" class="empty">Loading…</td></tr></tbody></table></div></section>
+<div class="modal" id="recordModal"><div class="modal-card"><div class="modal-head"><div><span class="eyebrow">NEW VISIT</span><h3>Book appointment</h3></div><button class="close-btn" id="closeModal">×</button></div><form id="recordForm"><label>Patient<select id="patient_id" required><option value="">Choose patient</option></select></label><label>Doctor<select id="doctor_id" required><option value="">Choose doctor</option></select></label><div class="form-grid"><label>Appointment date<input id="appointment_date" type="date" required></label><label>Appointment time<input id="appointment_time" type="time" required></label></div><label>Initial status<select id="status"><option>Scheduled</option><option>Confirmed</option></select></label><div class="modal-actions"><button type="button" class="btn btn-ghost" id="cancelModal">Cancel</button><button class="btn btn-primary">Confirm booking</button></div></form></div></div>
+<footer>MediCare Desk Hospital Management <span>Designed for better patient experiences.</span></footer></main></div>
+<div id="toast" class="toast"></div><script src="js/app.js"></script><script src="js/appointments.js"></script></body></html>

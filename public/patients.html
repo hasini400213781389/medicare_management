@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MediCare Desk | Patients</title><link rel="stylesheet" href="css/style.css"></head><body>
+<div class="app-shell"><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">✚</span><span>MediCare Desk<small>Hospital Suite</small></span></a>
+<div class="nav-label">WORKSPACE</div><nav>
+<a class="nav-link" href="index.html"><span>▦</span> Dashboard</a>
+<a class="nav-link active" href="patients.html"><span>♙</span> Patients</a>
+<a class="nav-link " href="doctors.html"><span>⚕</span> Doctors</a>
+<a class="nav-link " href="appointments.html"><span>▣</span> Appointments</a>
+</nav><div class="sidebar-bottom"><div class="help-card"><div class="help-icon">♡</div><b>Need a hand?</b><p>Keep your care operations running smoothly.</p></div><small>© 2026 MediCare Desk</small></div></aside>
+<main class="main-content"><header class="topbar"><div><span class="eyebrow">PATIENT DIRECTORY</span><h1>Patients</h1></div><div class="top-actions"><span class="today" id="todayLabel"></span><div class="avatar">AD</div></div></header>
+<section class="page-intro"><div><h2>Every patient, thoughtfully cared for.</h2><p>Organize information securely and keep your care team in sync.</p></div><div class="intro-art"><img src="assets/patient-care.svg" alt="Healthcare illustration"><img src="assets/medical-team.svg" alt="Healthcare illustration"></div></section>
+
+<section class="toolbar"><div class="search-box">⌕ <input id="searchInput" placeholder="Search name, email or phone…"></div><button class="btn btn-primary" id="addBtn">＋ Add patient</button></section>
+<section class="content-card"><div class="section-heading"><div><span class="eyebrow">PATIENT RECORDS</span><h3>Registered patients</h3></div><span class="muted" id="recordCount"></span></div><div class="table-wrap"><table><thead><tr><th>Patient</th><th>Email</th><th>Phone</th><th>Gender</th><th>Age</th><th>Actions</th></tr></thead><tbody id="dataTable"><tr><td colspan="6" class="empty">Loading…</td></tr></tbody></table></div></section>
+<div class="modal" id="recordModal"><div class="modal-card"><div class="modal-head"><div><span class="eyebrow">PATIENT DETAILS</span><h3 id="modalTitle">Add patient</h3></div><button class="close-btn" id="closeModal">×</button></div><form id="recordForm"><input type="hidden" id="recordId"><label>Full name<input id="name" required maxlength="100" placeholder="Patient full name"></label><div class="form-grid"><label>Email address<input id="email" type="email" required placeholder="name@email.com"></label><label>Phone number<input id="phone" maxlength="15" placeholder="Phone number"></label><label>Gender<select id="gender"><option value="">Select gender</option><option>Female</option><option>Male</option><option>Other</option></select></label><label>Age<input id="age" type="number" min="0" max="130" placeholder="Age"></label></div><div class="modal-actions"><button type="button" class="btn btn-ghost" id="cancelModal">Cancel</button><button class="btn btn-primary">Save patient</button></div></form></div></div>
+<footer>MediCare Desk Hospital Management <span>Designed for better patient experiences.</span></footer></main></div>
+<div id="toast" class="toast"></div><script src="js/app.js"></script><script src="js/records.js"></script><script src="js/patients.js"></script></body></html>
